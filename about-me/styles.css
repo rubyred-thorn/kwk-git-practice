@@ -1,0 +1,443 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  background-color: rgba(208, 184, 240, 0.781);
+}
+
+.bg-image {
+  background-image: url('/about-me/images/diego-ph-VmRxRz0gD_s-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.bg-image-overlay {
+  background-color: rgba(240, 216, 184, 0.205);
+  width: 100%;
+  height: auto;
+  padding-top: 1px;
+}
+
+#main-page-header {
+  margin-bottom: 2px;
+  margin-left: 3em;
+
+  padding-top: 3%;
+
+  height: auto;
+  width: auto;
+  color: rgb(23, 5, 36);
+}
+
+.main-header h1 {
+  margin-bottom: 4px;
+
+  font-size: 50px;
+  font-family: "Patrick Hand SC", Georgia, Times, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#pretty-name {
+  font-size: 50px;
+  font-family: "Zhi Mang Xing", "Brush Script MT", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-header h3 {
+  padding-top: 2px;
+
+  font-size: 26px;
+  font-family: "PT Serif", Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+#main-nav-bar button {
+  margin-top: 1.5em;
+  margin-bottom: 5%;
+  margin-right: 0;
+  margin-left: 2.2em;
+
+  padding-top: 7px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 7px;
+
+  border-radius: 15px;
+  font-size: 18px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgba(255, 209, 236, 0.87);
+  box-shadow: 3px 3px;
+}
+
+#main-nav-bar button:hover {
+  background-color: rgba(202, 165, 187, 0.87);
+}
+
+main {
+  margin-left: 3em;
+
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main p {
+  line-height: 1.45em;
+}
+
+.wave {
+  --size: 30px;
+  --b: 10px;
+  --m: 1;
+  --p: calc(var(--m)*var(--size));
+  --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
+
+  --_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%;
+  mask:
+    radial-gradient(var(--R) at left 50% bottom calc(-1 * var(--p)), var(--_g)) 
+     calc(50% - 2*var(--size)) calc(50% - var(--size)/2 - var(--b)/2) / calc(4 * var(--size)) calc(var(--size) + var(--b)) repeat-x,
+    radial-gradient(var(--R) at left 50% top calc(-1*var(--p)),var(--_g)) 
+     50%  calc(50% + var(--size)/2 + var(--b)/2) / calc(4 * var(--size)) calc(var(--size) + var(--b)) repeat-x
+     ;
+  background: linear-gradient(90deg,rgb(154, 83, 255),rgb(255, 129, 44));
+  height: 150px;
+}
+
+#first-wave {
+  margin-bottom: -5.8em;
+  margin-top: -4.4em;
+}
+
+#second-wave {
+  margin-bottom: -0.5em;
+}
+
+.page-header {
+  background-color: rgba(232, 180, 237, 0.479);
+}
+
+.page-header h2 {
+  padding-top: 5px;
+  padding-bottom: 10px;
+
+  font-size: 38px;
+  font-family: "Patrick Hand SC", Georgia, Times, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#bio-header {
+  border: 2px solid rgb(0, 0, 0);
+
+  margin-left: -3em;
+
+  padding-left: 3em;
+}
+
+#bio-page-content-background {
+  background-color: rgba(233, 215, 245, 0.342);
+
+  padding-top: 1em;
+  padding-left: 3em;
+  padding-bottom: 3.5em;
+  margin-left: -3em;
+}
+
+.bio-flip-card {
+  background-color: transparent;
+  margin-top: 2px;
+  width: 19em;
+  height: 19em;
+  perspective: 1000px;
+  position: relative;
+}
+
+#bio-page-content-description {
+  font-size: 20px;
+
+  min-width: auto;
+  width: 78%;
+}
+
+.also-cards {
+  padding-top: 1.5em;
+}
+
+.also-cards h3 {
+  font-size: 20px;
+  padding-bottom: 1.5em;
+}
+
+#also-flip-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card-inner {
+  position: relative;
+  width: 19em;
+  height: 19em;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border: 2px solid black;
+}
+
+.bio-flip-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: rgba(208, 184, 240, 0.781);
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+
+.card-back {
+  background-color: rgba(232, 180, 237, 0.479);
+  transform: rotateY(180deg);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 1.8em;
+  padding-left: 1.8em;
+}
+
+.card-title {
+  padding-bottom: 6px;
+
+  font-family: "PT Serif", Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  text-underline-offset: 4px;
+  text-decoration-color: rgb(81, 173, 230);
+  text-decoration-thickness: 3px;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+}
+
+.card-back p {
+  padding-top: 6px;
+
+  font-size: 16.5px;
+}
+
+
+#kwk-journey-header {
+  border: 2px solid black;
+
+  margin-left: -3em;
+  padding-left: 3em;
+}
+
+#kwk-journey-content-background {
+  background-color: rgba(233, 215, 245, 0.342);
+
+  margin-left: -3em;
+  padding-left: 3em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+#kwk-journey-content {
+  font-size: 18px;
+}
+
+code {
+  font-size: 16px;
+  color: rgb(255, 153, 0);
+  background-color: rgba(31, 31, 31, 0.747);
+  padding: 2px;
+}
+
+.code-fun-facts {
+  padding-top: 0.8em;
+}
+
+.code-fun-facts li {
+  list-style: square;
+
+  padding-bottom: 3px;
+}
+
+#close-header {
+  border: 2px solid black;
+
+  margin-left: -3em;
+  padding-left: 3em;
+}
+
+#closing-page-content-background {
+  padding-top: 1.5em;
+}
+
+#closing-page-content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  margin-bottom: 1em;
+}
+
+#closing-page-content p {
+  font-size: 2em;
+  font-family: "Patrick Hand SC", Georgia, Times, serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+.page-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  padding-bottom: 1.7em;
+
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#connect-me-bar li {
+  list-style: none;
+
+  margin-top: 1em;
+  margin-bottom: 5%;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+#connect-me-bar img {
+  width: 40px;
+}
+
+#connect-me-bar button {
+  background-color: transparent;
+  border: none;
+}
+
+#connect-me-bar .nav-links:hover {
+  transform: scale(1.2);
+}
+
+.pretty-font {
+  font-size: 40px;
+  font-family: "Zhi Mang Xing", "Brush Script MT", cursive;
+  font-weight: 400;
+  font-style: normal;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.trigger-popup {
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 18px;
+  z-index: 10;
+  background-color: rgba(233, 215, 245, 0.932);
+  width: 500px;
+  max-width: 80%;
+}
+
+.popup.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed black;
+}
+
+.popup-header .popup-title {
+  font-family: "PT Serif", Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+}
+
+.popup-header .popup-close-button {
+  cursor: pointer;
+  outline: none;
+  background: none;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.popup-close-button {
+  border: 3px solid black;
+  border-radius: 50%;
+  padding: 1px 6px;
+}
+
+.popup-content {
+  padding: 10px 15px;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.popup-content ul {
+  padding-left: 25px;
+}
+
+.popup-content li a {
+  color: rgb(23, 5, 36);
+  font-weight: 700;
+}
+
+#popup-overlay {
+  transition: 200ms ease-in-out;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#popup-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
