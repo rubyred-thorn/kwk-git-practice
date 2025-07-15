@@ -1,3 +1,3 @@
-# kwk-git-practice
-KWK Challenge: GIT1:  
-A Git practice repository to try out
+# kwk-practice
+KWK Challenge: GIT1: ✓  
+KWK Challenge: About Me Portfolio
