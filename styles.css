@@ -10,7 +10,7 @@ body {
 }
 
 .bg-image {
-  background-image: url('https://github.com/rubyred-thorn/kwk-practice/blob/about-me/images/diego-ph-VmRxRz0gD_s-unsplash.jpg?raw=true');
+  background-image: url('https://github.com/rubyred-thorn/kwk-practice/blob/about-me/images/diego-ph-VmRxRz0gD_s-unsplash.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
